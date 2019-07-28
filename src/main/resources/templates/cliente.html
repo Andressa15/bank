@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   
+   <div th:each="mensagem : ${mensagens}">
+		<p th:text="'Mensagem:'  + ${mensagem}"></p>	
+	</div>
+   
+       <div th:each=" cliente : ${clientes}">
+     
+            <h1 th:text="${cliente.nome}"></h1>
+   
+            <td>CPF:</td>
+            <p th:text="${cliente.cpf}"></p>    </tr>
+
+            <h1>Telefone:</h1>
+            <p th:text="${cliente.telefone}"></p>
+     
+            <h1>Conta poupança:</h1>
+           <p th:text="${cliente.conta.contaPoupanca}"></p>
+    
+    <a href="/">Voltar</a>
+</div>
+
+</body>
+</html> 	
+      
